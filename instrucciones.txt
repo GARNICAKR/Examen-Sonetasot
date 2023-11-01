@@ -1,0 +1,16 @@
+# Examen-Sonetasot-
+Descargar la imagen de postgres:alpine3.18 en caso de querer crear un bd en el docker
+Configurar la variable de entorno de la url de conexion a la base de datos en caso de necesitarlo, se encuentra ubicado en 
+/Back-ExamenSonetasot/env
+Ejecutar docker-compose up 
+#Front
+#El front tarda un poco mas en arrancar
+1 url localhost:8081/#/            "Ver primera pagina"
+2 url localhost:8081/#/concluido   "Ver segunda pagina  
+#Back 
+##Nombre de la variable "fecha"  formato de fecha "2023-11-12"##
+index  localhost:4000/                  "Muestra todos los usuarios y sus citas"
+get    localhost:4000/:CURP             "Muestra todos las citas de un usuario"
+post   localhost:4000/:CURP             "Crea un usuario si no existe y agrega la cita"  agregar un valor fecha
+put    localhost:4000/cita/:idCita      "Edita una fecha" agregar un valor fecha
+delete localhost:4000/cita/:idCita      "Elimina una fecha por id"
